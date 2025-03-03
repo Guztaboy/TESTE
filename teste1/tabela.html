@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Informativo de Velórios</title>
+    <link rel="shortcut icon" href="passaro.svg" type="image/x-icon">
+</head>
+<body>
+
+<h1>Informativo de Velórios</h1>
+
+<!-- Tabela -->
+<table id="editableTable">
+    <thead>
+        <tr>
+            <th>Cemitério</th>
+            <th>Nome do Falecido</th>
+            <th>Data do Velório</th>
+            <th>Horário de início</th>
+            <th>Horário do Fim do Velório</th>
+            <th>Sala do Velório</th>
+            <th>Data & Horário de Sepultamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Araçá</td>
+            <td>MARTA SUELI NASCIMENTO</td>
+            <td>01/03/2025</td>
+            <td>09:00</td>
+            <td>13:00</td>
+            <td>SALA G</td>
+            <td>01/03/2025 às 13:00</td>
+        </tr>
+        <tr>
+            <td>Araçá</td>
+            <td>ISRAEL PINTO FERREIRA</td>
+            <td>01/03/2025</td>
+            <td>09:30</td>
+            <td>11:30</td>
+            <td>SALA C</td>
+            <td>01/03/2025 às 11:30</td>
+        </tr>
+        <tr>
+            <td>Araçá</td>
+            <td>PIEDADE MONTEIRO DE AGUIAR</td>
+            <td>28/02/2025</td>
+            <td>07:00</td>
+            <td>11:00</td>
+            <td>SALA F</td>
+            <td>28/02/2025 às 13:00</td>
+        </tr>
+        <tr>
+            <td>Araçá</td>
+            <td>HELENA GONCALVES MIRANDA</td>
+            <td>28/02/2025</td>
+            <td>07:00</td>
+            <td>13:00</td>
+            <td>SALA E</td>
+            <td>28/02/2025 às 12:30</td>
+        </tr>
+        <tr>
+            <td>Araçá</td>
+            <td>HELENA GONCALVES MIRANDA</td>
+            <td>28/02/2025</td>
+            <td>07:00</td>
+            <td>13:00</td>
+            <td>SALA E</td>
+            <td>28/02/2025 às 12:30</td>
+        </tr>
+        <tr>
+            <td>Araçá</td>
+            <td>HELENA GONCALVES MIRANDA</td>
+            <td>28/02/2025</td>
+            <td>07:00</td>
+            <td>13:00</td>
+            <td>SALA E</td>
+            <td>28/02/2025 às 12:30</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="logo-background">
+    <img src="logocortel.svg" alt="Logo">
+</div>
+<div class="logo-background2">
+    <img src="passaro.svg" alt="Logo">
+</div>
+
+<script>
+    //edit da tabela
+    const table = document.getElementById('editableTable');
+    table.addEventListener('click', function(event) {
+        const target = event.target;
+        if (target.tagName === 'TD') {
+            target.setAttribute('contenteditable', true);
+            target.focus();
+        }
+    });
+
+    // salvando
+    table.addEventListener('blur', function(event) {
+        const target = event.target;
+        if (target.tagName === 'TD') {
+            target.removeAttribute('contenteditable');
+        }
+    }, true);
+</script>
+
+</body>
+</html>
